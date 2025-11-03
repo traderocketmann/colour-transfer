@@ -1,0 +1,253 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 1118877715456453,
+      "steps": 2,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "75",
+        0
+      ],
+      "positive": [
+        "111",
+        0
+      ],
+      "negative": [
+        "110",
+        0
+      ],
+      "latent_image": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "66": {
+    "inputs": {
+      "shift": 0.6,
+      "model": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "75": {
+    "inputs": {
+      "strength": 1,
+      "model": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFGNorm"
+    }
+  },
+  "78": {
+    "inputs": {
+      "image": "0_2 (12).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "88": {
+    "inputs": {
+      "pixels": [
+        "93",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "89": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Lightning-4steps-V1.0.safetensors",
+      "strength_model": 1,
+      "model": [
+        "115",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    }
+  },
+  "93": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "image": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "106": {
+    "inputs": {
+      "image": "0_1 (5).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "110": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "116",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ],
+      "image1": [
+        "93",
+        0
+      ],
+      "image2": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "111": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "116",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ],
+      "image1": [
+        "93",
+        0
+      ],
+      "image2": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "112": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "115": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default",
+      "compute_device": "cuda:1",
+      "virtual_vram_gb": 0,
+      "donor_device": "cuda:0",
+      "expert_mode_allocations": "",
+      "eject_models": true
+    },
+    "class_type": "UNETLoaderDisTorch2MultiGPU",
+    "_meta": {
+      "title": "UNETLoaderDisTorch2MultiGPU"
+    }
+  },
+  "116": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "cuda:0",
+      "virtual_vram_gb": 0,
+      "donor_device": "cuda:1",
+      "expert_mode_allocations": "",
+      "eject_models": false
+    },
+    "class_type": "CLIPLoaderDisTorch2MultiGPU",
+    "_meta": {
+      "title": "CLIPLoaderDisTorch2MultiGPU"
+    }
+  },
+  "117": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors",
+      "compute_device": "cuda:0",
+      "virtual_vram_gb": 0,
+      "donor_device": "cuda:1",
+      "expert_mode_allocations": "",
+      "eject_models": true
+    },
+    "class_type": "VAELoaderDisTorch2MultiGPU",
+    "_meta": {
+      "title": "VAELoaderDisTorch2MultiGPU"
+    }
+  },
+  "118": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "SaveImageWebsocket"
+    }
+  }
+}

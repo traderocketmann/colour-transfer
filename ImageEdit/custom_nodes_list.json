@@ -1,0 +1,24 @@
+{
+    "custom_nodes": {
+        "https://github.com/kijai/ComfyUI-KJNodes": {
+            "state": "not-installed",
+            "hash": "-"
+        },
+        "https://github.com/chflame163/ComfyUI_LayerStyle": {
+            "state": "not-installed",
+            "hash": "-"
+        },
+        "https://github.com/cubiq/ComfyUI_essentials": {
+            "state": "not-installed",
+            "hash": "-"
+        },
+        "https://github.com/ltdrdata/was-node-suite-comfyui": {
+            "state": "not-installed",
+            "hash": "-"
+        },
+        "https://github.com/pollockjj/ComfyUI-MultiGPU": {
+            "state": "not-installed",
+            "hash": "-"
+        }
+    }
+}

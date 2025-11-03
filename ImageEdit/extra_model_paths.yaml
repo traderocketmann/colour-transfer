@@ -1,0 +1,5 @@
+comfyui:
+  is_default: true
+  base_path: /workspace/models
+  loras: loras
+  vae: vae
